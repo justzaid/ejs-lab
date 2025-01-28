@@ -52,9 +52,21 @@ const restuarant = {
   }
 
 app.get('/', (req, res) => {
-  res.render('home.ejs', {
-    restuarant: restuarant
+    res.render('home.ejs', {
+        restuarant: restuarant
   })});
+
+app.get('/menu', (req, res) => {
+    res.render('menu.ejs', {
+        menu: restuarant.menu
+    })
+})
+
+app.get('/menu/:category', (req, res) => {
+    res.render('category.ejs', {
+        category: restuarant.menu.category
+    })
+})
 
 app.listen(3000);
 
