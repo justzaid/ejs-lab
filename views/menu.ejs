@@ -16,11 +16,11 @@
             </br>Price: <%= item.price %>
             </br>Rating: <%= item.rating %>
             </br>Details: <%= item.details %>
+            </br>Category: <%= item.category[0].toUpperCase() + item.category.slice(1) %>
             </li>
         </br>
         <% }); %>
     </ul>
-
 
 
 </body>
